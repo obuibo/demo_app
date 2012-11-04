@@ -1,0 +1,25 @@
+<%= form_for(@princess) do |f| %>
+  <% if @princess.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@princess.errors.count, "error") %> prohibited this princess from being saved:</h2>
+
+      <ul>
+      <% @princess.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :wealth %><br />
+    <%= f.number_field :wealth %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @princess.name %>
+</p>
+
+<p>
+  <b>Wealth:</b>
+  <%= @princess.wealth %>
+</p>
+
+
+<%= link_to 'Edit', edit_princess_path(@princess) %> |
+<%= link_to 'Back', princesses_path %>
